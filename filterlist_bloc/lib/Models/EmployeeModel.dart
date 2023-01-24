@@ -1,0 +1,46 @@
+import 'package:equatable/equatable.dart';
+
+class EmployeeModel extends Equatable{
+  final String name;
+  final String address;
+  final String id;
+  EmployeeModel({
+    required this.name,
+    required this.address,
+    required this.id
+  });
+
+
+  EmployeeModel copyWith({
+  required String name,
+    required String address,
+    required String id,
+}) {
+    return EmployeeModel(
+        name: name,
+        address: address,
+        id: id
+    );
+  }
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [name, address, id];
+
+  Map<String, dynamic> toMap() {
+    return {
+      "name": name,
+      "address": address,
+      "id": id,
+    };
+  }
+
+  factory EmployeeModel.fromMap(Map<String, dynamic> map) {
+    return EmployeeModel(
+      name: map["name"],
+      address: map["address"],
+      id: map["id"],
+    );
+  }
+//
+}

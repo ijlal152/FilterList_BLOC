@@ -30,7 +30,7 @@ class EmployeeModel extends Equatable{
     );
   }
 
-  static dynamic convertList_To_JsonResponse(List<dynamic> items) {
+  static List<Map<String, dynamic>> convertList_To_JsonResponse(List<dynamic> items) {
     var mappedList = items.map((e) {
       return {
         "name" : e.name,
@@ -38,6 +38,7 @@ class EmployeeModel extends Equatable{
         "id" : e.id,
       };
     }).toList();
+
     return mappedList;
   }
 

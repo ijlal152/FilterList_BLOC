@@ -8,6 +8,11 @@ class SortListCubit extends Cubit<SortListState> {
   SortListCubit() : super(SortListInitial());
 
 
+  void ascendingOrder(dynamic list){
+    //state.addEmployee.sort((a,b) => a.name.compareTo(b.name));
+
+  }
+
 
 
 

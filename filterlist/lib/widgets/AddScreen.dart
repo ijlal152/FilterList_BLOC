@@ -57,6 +57,7 @@ class _AddScreenState extends State<AddScreen> {
                         if(value!.isEmpty){
                           return 'Enter address';
                         }
+                        return null;
                       },
                       decoration: const InputDecoration(
                           label: Text('Address'),
